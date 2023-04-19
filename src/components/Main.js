@@ -20,11 +20,41 @@ const Main = () => {
         </p>
       </div>
       <div className='text-5xl flex justify-center gap-5 md:gap-16 py-3 text-gray-600'>
-        <AiFillLinkedin />
-        <AiFillGithub />
-        <AiFillYoutube />
-        <AiFillTwitterCircle />
-        <AiFillMail />
+        <a
+          href='https://www.linkedin.com/in/charanreddy404/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <AiFillLinkedin />
+        </a>
+        <a
+          href='https://github.com/CharanReddy404'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <AiFillGithub />
+        </a>
+        <a
+          href='https://www.youtube.com/@charanreddy404'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <AiFillYoutube />
+        </a>
+        <a
+          href='https://twitter.com/CharanReddy404'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <AiFillTwitterCircle />
+        </a>
+        <a
+          href='mailto: charanlucky6143@gmail.com'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <AiFillMail />
+        </a>
       </div>
       <div className=''></div>
     </div>
