@@ -19,8 +19,8 @@ const Header = () => {
       <div className='hidden gap-6 items-center font-medium lg:flex'>
         <Link href='/experience'>Experience</Link>
         <Link href='/projects'>Projects</Link>
-        <Link href='/'>Certifications</Link>
-        <Link href='/'>Blogs</Link>
+        <Link href='/certifications'>Certifications</Link>
+        <Link href='/blogs'>Blogs</Link>
         <Link href='/' target='_blank'>
           Resume
         </Link>
@@ -39,10 +39,10 @@ const Header = () => {
               <Link href='/projects'>Projects</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href='/'>Certifications</Link>
+              <Link href='/certifications'>Certifications</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href='/'>Blogs</Link>
+              <Link href='/blogs'>Blogs</Link>
             </SheetClose>
             <SheetClose asChild>
               <Link href='/' target='_blank'>
