@@ -19,7 +19,7 @@ const Projects = () => {
         onValueChange={(val) => {
           setValue(val);
         }}
-        className='w-full flex justify-center gap-1 md:gap-6 overflow-x-scroll'
+        className='w-full flex justify-center gap-1 md:gap-6 overflow-x-scroll no-scrollbar '
       >
         <ToggleGroupItem
           className='border-black dark:border-gray-400'
