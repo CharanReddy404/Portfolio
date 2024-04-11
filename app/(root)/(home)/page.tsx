@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import Link from 'next/link';
 import {
   FaLinkedin,
@@ -8,21 +9,24 @@ import {
 } from 'react-icons/fa6';
 import { IoMail } from 'react-icons/io5';
 
+const words = `Hello! I'm a Full Stack Developer passionate about turning ideas
+into reality. Skilled in ReactJs, NodeJs, NextJs, JavaScript,
+TypeScript, Tailwind CSS, and Core Java. I expanded my skill set by
+learning about microservices, deployment methodologies, PostgreSQL, and
+the fundamentals of Docker, Kubernetes, Helm, and Jenkins, among others.
+Certified in JavaScript, Node.js, and Full Stack Web Development. Always
+eager to grow and contribute.`;
+
 export default function Home() {
   return (
     <div className='max-w-5xl w-full p-4 md:p-14 flex flex-col gap-12 '>
       <h1 className='text-lg md:text-4xl uppercase tracking-widest'>
         I&apos;m Charan B
       </h1>
-      <p className='text-sm md:text-lg md:leading-10 tracking-wide'>
-        Hello! I&apos;m a Full Stack Developer passionate about turning ideas
-        into reality. Skilled in ReactJs, NodeJs, NextJs, JavaScript,
-        TypeScript, Tailwind CSS, and Core Java. I expanded my skill set by
-        learning about microservices, deployment methodologies, PostgreSQL, and
-        the fundamentals of Docker, Kubernetes, Helm, and Jenkins, among others.
-        Certified in JavaScript, Node.js, and Full Stack Web Development. Always
-        eager to grow and contribute.
-      </p>
+      <TextGenerateEffect
+        className='text-sm md:text-lg md:leading-10 tracking-wide'
+        words={words}
+      />
       <div className='flex gap-4'>
         <Link href='https://github.com/CharanReddy404' target='_blank'>
           <Button className='h-12 gap-1'>

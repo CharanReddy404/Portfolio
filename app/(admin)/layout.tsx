@@ -4,13 +4,14 @@ import LeftSidebar from '@/components/Admin/LeftSidebar';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className='relative'>
+    <main className='relative bg-inherit'>
       <AdminHeader />
-      <div className='flex'>
-        <LeftSidebar />
-        <section className='flex min-h-screen flex-1 flex-col px-6 pb-6 pt-36 max-md:pb-14 sm:px-14'>
-          <div className='mx-auto w-full max-w-5xl'>{children}</div>
-        </section>
+
+      <div className='flex pt-14 h-[100vh]'>
+        <div className='hidden lg:block'>
+          <LeftSidebar />
+        </div>
+        <div className='mx-auto w-full max-w-5xl'>{children}</div>
       </div>
     </main>
   );
