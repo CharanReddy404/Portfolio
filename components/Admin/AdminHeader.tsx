@@ -4,11 +4,12 @@ import { ModeToggle } from '../ModeToggle';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '../ui/sheet';
 import { IoMdMenu } from 'react-icons/io';
 import Link from 'next/link';
+import { Separator } from '../ui/separator';
 
 const AdminHeader = () => {
   return (
-    <div className='py-2 px-4 fixed w-full flex justify-between items-center bg-inherit'>
-      <div className='flex gap-5'>
+    <div className='py-2 px-4 fixed w-full flex justify-between items-center bg-inherit shadow-sm'>
+      <div className='flex gap-3'>
         <div className='flex lg:hidden'>
           <Sheet>
             <SheetTrigger>
@@ -19,26 +20,25 @@ const AdminHeader = () => {
               className='flex flex-col pt-14 gap-4 w-[180px] md:w-[300px]'
             >
               <SheetClose asChild>
-                <Link className='' href='admin'>
-                  Profile
-                </Link>
+                <Link href='/admin'>Profile</Link>
               </SheetClose>
+              <Separator />
               <SheetClose asChild>
-                <Link href='admin/experience'>Experience</Link>
+                <Link href='/admin/experience'>Experience</Link>
               </SheetClose>
+              <Separator />
               <SheetClose asChild>
-                <Link href='admin/projects'>Projects</Link>
+                <Link href='/admin/projects'>Projects</Link>
               </SheetClose>
+              <Separator />
               <SheetClose asChild>
-                <Link href='admin/certifications'>Certifications</Link>
+                <Link href='/admin/certifications'>Certifications</Link>
               </SheetClose>
+              <Separator />
               <SheetClose asChild>
-                <Link href='admin/blogs'>Blogs</Link>
+                <Link href='/admin/blogs'>Blogs</Link>
               </SheetClose>
-              <SheetClose asChild>
-                <Link href='admin/resume'>Resume</Link>
-              </SheetClose>
-              <ModeToggle />
+              <Separator />
             </SheetContent>
           </Sheet>
         </div>

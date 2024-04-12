@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className='hidden lg:block'>
           <LeftSidebar />
         </div>
-        <div className='mx-auto w-full max-w-5xl'>{children}</div>
+        <div className='w-full max-w-7xl p-8'>{children}</div>
       </div>
     </main>
   );

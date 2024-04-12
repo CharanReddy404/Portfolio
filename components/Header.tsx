@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { IoMdMenu } from 'react-icons/io';
+import { Separator } from './ui/separator';
 
 const Header = () => {
   return (
@@ -35,20 +36,25 @@ const Header = () => {
             <SheetClose asChild>
               <Link href='/experience'>Experience</Link>
             </SheetClose>
+            <Separator />
             <SheetClose asChild>
               <Link href='/projects'>Projects</Link>
             </SheetClose>
+            <Separator />
             <SheetClose asChild>
               <Link href='/certifications'>Certifications</Link>
             </SheetClose>
+            <Separator />
             <SheetClose asChild>
               <Link href='/blogs'>Blogs</Link>
             </SheetClose>
+            <Separator />
             <SheetClose asChild>
               <Link href='/' target='_blank'>
                 Resume
               </Link>
             </SheetClose>
+            <Separator />
             <ModeToggle />
           </SheetContent>
         </Sheet>

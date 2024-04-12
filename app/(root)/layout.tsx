@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='flex min-h-screen flex-col items-center'>
+    <div className='flex min-h-screen flex-col items-center bg-inherit'>
       <Header />
       {children}
     </div>
