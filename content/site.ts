@@ -17,8 +17,8 @@ export const site = {
   tagline:
     'I design and build complex backend systems end to end — production-ready services behind the parts of a product you never see, but always rely on.',
   about: [
-    'I’m a backend engineer at Simpplr, working on the Recognition & Rewards product. I build services with NestJS and Fastify on PostgreSQL in a TypeScript monorepo — including the ledger that tracks every rewards transaction.',
-    'Before that I shipped features end to end on a Solana-based trading product at EMOMENT, and mentored nearly a thousand students in Java and data structures as a Teaching Assistant at Coding Ninjas. Outside work, I’m building a few new backend-focused projects — they’ll be on this page soon.',
+    'I’m a backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, where I work on the Recognition & Rewards product. I build TypeScript services with NestJS, Fastify, PostgreSQL and Kafka in a monorepo, and own the rewards ledger that is the source of truth for every balance and transaction.',
+    'I’ve been named a Top Performer with 5/5 annual reviews in FY2025 and FY2026. Before Simpplr, I shipped features end to end on a Solana-based trading product at EMOMENT, and mentored nearly a thousand students in Java and data structures as a Teaching Assistant at Coding Ninjas. Outside work, I’m building a few new backend-focused projects — they’ll be on this page soon.',
   ],
   socials: {
     github: 'https://github.com/CharanReddy404',
