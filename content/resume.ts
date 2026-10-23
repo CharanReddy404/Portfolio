@@ -7,7 +7,13 @@ export type ResumeJob = { role: string; company: string; when: string; place: st
 
 export const resume = {
   name: 'Charan B',
-  contact: [site.email, site.phone, 'github.com/CharanReddy404', 'linkedin.com/in/charanreddy404'],
+  contact: [
+    site.email,
+    site.phone,
+    site.url.replace(/^https?:\/\//, ''),
+    'github.com/CharanReddy404',
+    'linkedin.com/in/charanreddy404',
+  ],
 
   summary:
     'Backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Rated Far Exceeds Expectations for FY2026.',

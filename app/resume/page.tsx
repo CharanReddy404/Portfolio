@@ -66,14 +66,17 @@ export default function Resume() {
       >
         <header className='mb-[6pt] text-center'>
           <h1 className='text-[25pt] font-bold leading-none tracking-[0.5pt] [font-variant:small-caps]'>{r.name}</h1>
-          <p className='mt-[5pt] text-[9.6pt]'>
-            {r.contact.map((c, i) => (
-              <span key={c}>
-                {i > 0 && <span className='mx-[5pt]'>|</span>}
-                <span className={c.startsWith('+') ? '' : 'underline'}>{c}</span>
-              </span>
-            ))}
-          </p>
+          {/* Two lines: email, phone, portfolio, then GitHub and LinkedIn. */}
+          {[r.contact.slice(0, 3), r.contact.slice(3)].map((line, row) => (
+            <p key={row} className={`${row === 0 ? 'mt-[5pt]' : 'mt-[1pt]'} text-[9.6pt]`}>
+              {line.map((c, i) => (
+                <span key={c} className='whitespace-nowrap'>
+                  {i > 0 && <span className='mx-[5pt]'>|</span>}
+                  <span className={c.startsWith('+') ? '' : 'underline'}>{c}</span>
+                </span>
+              ))}
+            </p>
+          ))}
         </header>
 
         <Section title='Summary'>
