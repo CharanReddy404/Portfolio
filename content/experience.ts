@@ -18,9 +18,12 @@ export const experience: Experience[] = [
     end: 'Present',
     url: 'https://www.simpplr.com',
     highlights: [
-      'Backend engineer on Simpplr’s Recognition & Rewards product, building services with NestJS and Fastify on PostgreSQL inside a TypeScript monorepo.',
-      'Built the rewards ledger that records every rewards transaction, serving as the source of truth for balances and transaction history.',
-      'Shipped multiple complex features across recognition and rewards end to end, from API and data-model design through to production.',
+      'Backend engineer on the Recognition & Rewards team since Feb 2025, building NestJS and Fastify services on PostgreSQL in a TypeScript monorepo.',
+      'Own ledger management on the rewards side; designed a safe, auditable way to allocate allowance points mid-cycle and distributed 111,000+ points across multiple customers.',
+      'Designed and built the Tango gift-card availability webhook end to end, preventing redemptions from failing on out-of-stock items.',
+      'Built core logic for the new Programs feature with Peer Awards — award, per-giver and total program limits with weekly, monthly and quarterly resets — and delivered a key milestone in 15 days, half the expected time.',
+      'Shipped bulk points upload via CSV and editing recognition with points safely under concurrent edits; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube findings.',
+      'Merged 94+ PRs across Recognition, Rewards and Redemption with 80%+ code coverage, handled production support, and mentored two new backend engineers.',
     ],
     tech: [
       'TypeScript',
