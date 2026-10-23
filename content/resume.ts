@@ -16,7 +16,7 @@ export const resume = {
   ],
 
   summary:
-    'Backend engineer with 4+ years of experience, currently at Simpplr (B2B SaaS), building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Uses Claude and Cursor to design, build, test and ship features faster without trading off code quality. Top Performer at Simpplr with 5/5 annual reviews in FY2025 and FY2026.',
+    'Backend engineer with 3.5+ years building financial-grade TypeScript microservices (NestJS, Fastify, PostgreSQL, Kafka) for an enterprise rewards platform; Top Performer with 5/5 reviews in FY2025 and FY2026.',
 
   experience: [
     {
@@ -25,13 +25,13 @@ export const resume = {
       when: 'May 2023 – Present',
       place: 'Remote',
       points: [
-        'Designed and built the rewards ledger recording every rewards transaction, serving as the source of truth for balances and history; used it to allocate 111,000+ points mid-cycle across multiple customers through a safe, auditable process.',
-        'Owned the Tango gift-card availability webhook end to end, from API and data model design to production, preventing redemptions from failing on out-of-stock items.',
-        'Built core logic for the Programs feature with Peer Awards (award, per-giver and total program limits with weekly, monthly and quarterly resets) and delivered a key milestone in 15 days, half the expected time.',
-        'Shipped bulk points upload via CSV and concurrency-safe editing of recognition points; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube issues, including SQL injection.',
-        'Merged 150+ PRs across Recognition, Rewards and Redemption services with 80%+ code coverage, and mentored two new backend engineers through onboarding.',
-        'Used AI coding tools (Claude, Cursor) daily for the last 1.5 years to deliver end-to-end features faster, shipping production-ready code with zero reported production bugs.',
-        'Deployed services on Docker and Kubernetes with CI/CD on GitHub Actions and Jenkins.',
+        'Engineered core financial microservices for an enterprise recognition and rewards platform, designing user wallet and budget ledgers with strict ACID guarantees to handle high-concurrency reward transactions.',
+        'Built the multi-tenant reward store supporting multiple countries and multi-vendor integrations, fulfilling both digital and physical orders.',
+        'Owned the Tango gift-card availability webhook end to end, preventing failed redemptions on out-of-stock items.',
+        'Designed a safe, auditable ledger process to allocate 111,000+ points mid-cycle across multiple customers.',
+        'Built core logic for Programs with Peer Awards (award, per-giver and total program limits with weekly, monthly and quarterly resets); delivered a key milestone in 15 days, half the expected time.',
+        'Merged 150+ PRs across Recognition, Rewards and Redemption with 80%+ code coverage; upgraded Node.js 18 to 20, fixed critical SonarQube issues including SQL injection, and mentored two new backend engineers.',
+        'Used Claude and Cursor daily for 1.5 years to ship end-to-end features faster with zero reported production bugs; deployed on Docker and Kubernetes with CI/CD on GitHub Actions and Jenkins.',
       ],
     },
     {
