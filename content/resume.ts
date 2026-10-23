@@ -30,6 +30,7 @@ export const resume = {
         'Built core logic for the Programs feature with Peer Awards (award, per-giver and total program limits with weekly, monthly and quarterly resets) and delivered a key milestone in 15 days, half the expected time.',
         'Shipped bulk points upload via CSV and concurrency-safe editing of recognition points; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube issues, including SQL injection.',
         'Merged 150+ PRs across Recognition, Rewards and Redemption services with 80%+ code coverage, and mentored two new backend engineers through onboarding.',
+        'Used AI coding tools (Claude, Cursor) daily for the last 1.5 years to deliver end-to-end features faster, shipping production-ready code with zero reported production bugs.',
         'Deployed services on Docker and Kubernetes with CI/CD on GitHub Actions and Jenkins.',
       ],
     },
@@ -57,6 +58,7 @@ export const resume = {
     { group: 'Backend', items: ['Node.js', 'NestJS', 'Fastify', 'Express', 'REST APIs', 'Microservices', 'Kafka'] },
     { group: 'Data', items: ['PostgreSQL', 'Prisma', 'Redis', 'MongoDB'] },
     { group: 'Infra and tools', items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'Git', 'Linux'] },
+    { group: 'AI tools', items: ['Claude', 'Cursor'] },
     { group: 'Frontend', items: ['React', 'Redux', 'Next.js'] },
   ],
 
@@ -65,6 +67,7 @@ export const resume = {
     'Full Stack Web Development in Node.js (Back End)',
     'Data Structures in Java',
     'Understanding TypeScript',
+    'The Complete JavaScript Course: From Zero to Expert',
     'Cutshort Certified JavaScript — Advanced',
     'Build a URL Shortener from Scratch',
   ].map((name) => {
