@@ -16,7 +16,7 @@ export const resume = {
   ],
 
   summary:
-    'Backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Rated Far Exceeds Expectations for FY2026.',
+    'Backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Uses Claude and Cursor to design, build, test and ship features faster without trading off code quality. Rated Far Exceeds Expectations for FY2026.',
 
   experience: [
     {
