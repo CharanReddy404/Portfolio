@@ -46,41 +46,6 @@ export const quotes: Quote[] = [
     when: 'Jan 2026',
     featured: true,
   },
-  {
-    text: 'Charan is a strong engineer for the R&R team. He punches above his weight class to address deep and complex issues like a senior engineer and works well under pressure.',
-    name: 'Sean Coleman',
-    context: 'Peer feedback',
-    when: 'Feb 2026',
-  },
-  {
-    text: 'He takes the time to deeply understand problems before jumping into implementation, which really shows in the quality of his work.',
-    name: 'Harish Jangir',
-    context: 'Peer feedback',
-    when: 'Feb 2026',
-  },
-  {
-    text: 'He not only debugged it from the Recognition service’s perspective but also drilled down the code in the account service and clearly pointed out what’s going wrong in the flow.',
-    name: 'Ravi Kiran Kanneganti',
-    context: 'Peer feedback',
-    when: 'Feb 2026',
-  },
-  {
-    text: 'You consistently came prepared with a solid initial investigation, which saved time for both of us and helped expedite faster resolution of bugs.',
-    name: 'Gajendra Singh',
-    context: 'Peer feedback',
-    when: 'Feb 2026',
-  },  {
-    text: 'Your quality of work has been great always. You understand the problem deeply and then create your solutions, which shows critical thinking and makes sure all the edge cases are known beforehand.',
-    name: 'Dheeraj Mahra',
-    context: 'Peer feedback',
-    when: 'Feb 2026',
-  },
-  {
-    text: 'You take strong ownership of your tasks and see them through end-to-end. Your work on billing and invoicing was commendable — every detail was thoroughly thought through and executed perfectly.',
-    name: 'Sagar Aggarwal',
-    context: 'Peer feedback',
-    when: 'Feb 2026',
-  },
 ];
 
 // Screenshots of recognition posts from Simpplr's recognition platform, shown as they are (newest first).
@@ -105,4 +70,23 @@ export const recognitionCards: RecognitionCard[] = [
   { src: '/recognition/2025-04-brilliant-beginner-award.png', width: 680, height: 405, alt: 'Brilliant Beginner R&D Award announced by Parag Kulkarni, Apr 2025' },
   { src: '/recognition/2025-03-galactic-gratitude-arbind.png', width: 679, height: 513, alt: 'Galactic Gratitude from Arbind Kumar, Mar 2025' },
   { src: '/recognition/2025-03-hidden-gem-pankaj.png', width: 684, height: 495, alt: 'Hidden Gem from Pankaj Rajwani, Mar 2025' },
+];
+
+// Screenshots of written feedback from teammates (Lattice), shown as they are (newest first).
+export const feedbackCards: RecognitionCard[] = [
+  { src: '/feedback/2026-02-dheeraj-mahra.png', width: 586, height: 1167, alt: 'Feedback from Dheeraj Mahra, Feb 2026' },
+  { src: '/feedback/2026-02-sean-coleman.png', width: 584, height: 658, alt: 'Feedback from Sean Coleman, Feb 2026' },
+  { src: '/feedback/2026-02-ravi-kiran-kanneganti.png', width: 579, height: 704, alt: 'Feedback from Ravi Kiran Kanneganti, Feb 2026' },
+  { src: '/feedback/2026-02-gajendra-singh.png', width: 583, height: 755, alt: 'Feedback from Gajendra Singh, Feb 2026' },
+  { src: '/feedback/2026-02-sagar-aggarwal.png', width: 582, height: 887, alt: 'Feedback from Sagar Aggarwal, Feb 2026' },
+  { src: '/feedback/2026-02-aishma-gupta.png', width: 582, height: 861, alt: 'Feedback from Aishma Gupta, Feb 2026' },
+  { src: '/feedback/2026-02-harish-jangir.png', width: 585, height: 774, alt: 'Feedback from Harish Jangir, Feb 2026' },
+  { src: '/feedback/2026-02-aman-kumar-rai.png', width: 585, height: 860, alt: 'Feedback from Aman Kumar Rai, Feb 2026' },
+  { src: '/feedback/2026-02-sonu-kumar.png', width: 585, height: 756, alt: 'Feedback from Sonu Kumar, Feb 2026' },
+  { src: '/feedback/2025-08-anuj-kumar-gupta.png', width: 585, height: 614, alt: 'Feedback from Anuj Kumar Gupta, Aug 2025' },
+  { src: '/feedback/2025-08-satyam-singh-bhadoria.png', width: 584, height: 851, alt: 'Feedback from Satyam Singh Bhadoria, Aug 2025' },
+  { src: '/feedback/2025-sagar-aggarwal.png', width: 587, height: 869, alt: 'Feedback from Sagar Aggarwal, 2025' },
+  { src: '/feedback/2025-08-sonu-kumar.png', width: 590, height: 765, alt: 'Feedback from Sonu Kumar, Aug 2025' },
+  { src: '/feedback/2025-08-mark-lai.png', width: 592, height: 1166, alt: 'Feedback from Mark Lai, Aug 2025' },
+  { src: '/feedback/2025-07-abhishek-saini.png', width: 592, height: 1034, alt: 'Feedback from Abhishek Saini, Jul 2025' },
 ];

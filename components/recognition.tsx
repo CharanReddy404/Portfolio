@@ -1,5 +1,5 @@
 import { Award as AwardIcon, Quote as QuoteIcon } from 'lucide-react';
-import { awards, quotes, recognitionCards, stats, type Quote } from '@/content/recognition';
+import { awards, feedbackCards, quotes, recognitionCards, stats, type Quote } from '@/content/recognition';
 import { RecognitionWall } from './recognition-wall';
 import { cn } from '@/lib/utils';
 
@@ -19,7 +19,6 @@ function Attribution({ q, className }: { q: Quote; className?: string }) {
 
 export function Recognition() {
   const featured = quotes.find((q) => q.featured);
-  const rest = quotes.filter((q) => !q.featured);
 
   return (
     <div className='space-y-14'>
@@ -72,15 +71,12 @@ export function Recognition() {
       </div>
 
       <div>
-        <p className='font-mono text-xs uppercase tracking-wider text-muted'>Feedback from teammates</p>
-        <ul className='mt-5 gap-4 sm:columns-2'>
-          {rest.map((q) => (
-            <li key={q.name + q.when} className='mb-4 break-inside-avoid rounded-xl border border-line bg-surface p-5'>
-              <blockquote className='text-[15px] leading-relaxed'>“{q.text}”</blockquote>
-              <Attribution q={q} className='mt-4' />
-            </li>
-          ))}
-        </ul>
+        <p className='font-mono text-xs uppercase tracking-wider text-muted'>
+          Feedback from teammates · {feedbackCards.length}
+        </p>
+        <div className='mt-5'>
+          <RecognitionWall cards={feedbackCards} label='feedback' />
+        </div>
       </div>
     </div>
   );

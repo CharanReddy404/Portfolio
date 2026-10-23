@@ -7,8 +7,8 @@ import type { RecognitionCard } from '@/content/recognition';
 
 const PREVIEW = 6;
 
-// The original recognition posts as screenshots, in a masonry grid with a lightbox.
-export function RecognitionWall({ cards }: { cards: RecognitionCard[] }) {
+// Original screenshots (recognition posts, feedback) in a masonry grid with a lightbox.
+export function RecognitionWall({ cards, label = 'recognition' }: { cards: RecognitionCard[]; label?: string }) {
   const [expanded, setExpanded] = useState(false);
   const [open, setOpen] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -46,7 +46,7 @@ export function RecognitionWall({ cards }: { cards: RecognitionCard[] }) {
               type='button'
               onClick={() => setOpen(i)}
               className='block w-full overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-muted/50 hover:shadow-[0_12px_40px_-16px_rgb(0_0_0/0.25)]'
-              aria-label={`View recognition: ${card.alt}`}
+              aria-label={`View ${label}: ${card.alt}`}
             >
               <Image
                 src={card.src}
@@ -107,7 +107,7 @@ export function RecognitionWall({ cards }: { cards: RecognitionCard[] }) {
                 type='button'
                 onClick={() => step(-1)}
                 className='absolute left-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-black/50 text-white backdrop-blur hover:bg-black/70'
-                aria-label='Previous recognition'
+                aria-label={`Previous ${label}`}
               >
                 <ChevronLeft className='h-5 w-5' />
               </button>
@@ -115,7 +115,7 @@ export function RecognitionWall({ cards }: { cards: RecognitionCard[] }) {
                 type='button'
                 onClick={() => step(1)}
                 className='absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-black/50 text-white backdrop-blur hover:bg-black/70'
-                aria-label='Next recognition'
+                aria-label={`Next ${label}`}
               >
                 <ChevronRight className='h-5 w-5' />
               </button>
