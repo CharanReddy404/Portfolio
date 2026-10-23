@@ -17,7 +17,7 @@ export const site = {
   tagline:
     'I design and build complex backend systems end to end — production-ready services behind the parts of a product you never see, but always rely on.',
   about: [
-    'I’m a backend engineer with 3.5+ years of experience. At Simpplr, a B2B SaaS employee experience platform, I work on the Recognition & Rewards product. I build TypeScript services with NestJS, Fastify, PostgreSQL and Kafka in a monorepo, and own the rewards ledger that is the source of truth for every balance and transaction.',
+    'I’m a backend engineer with 4+ years of experience. At Simpplr, a B2B SaaS employee experience platform, I work on the Recognition & Rewards product. I build TypeScript services with NestJS, Fastify, PostgreSQL and Kafka in a monorepo, and own the rewards ledger that is the source of truth for every balance and transaction.',
     'I’ve been named a Top Performer with 5/5 annual reviews in FY2025 and FY2026. Before Simpplr, I shipped features end to end on a Solana-based trading product at EMOMENT, and mentored nearly a thousand students in Java and data structures as a Teaching Assistant at Coding Ninjas. Outside work, I’m building a few new backend-focused projects — they’ll be on this page soon.',
   ],
   socials: {

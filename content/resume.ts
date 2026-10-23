@@ -16,7 +16,7 @@ export const resume = {
   ],
 
   summary:
-    'Backend engineer with 3.5+ years building financial-grade TypeScript microservices (NestJS, Fastify, PostgreSQL, Kafka) for an enterprise rewards platform; Top Performer with 5/5 reviews in FY2025 and FY2026.',
+    'Backend engineer with 4+ years building financial-grade TypeScript microservices (NestJS, Fastify, PostgreSQL, Kafka) for an enterprise rewards platform; Top Performer with 5/5 reviews in FY2025 and FY2026.',
 
   experience: [
     {
