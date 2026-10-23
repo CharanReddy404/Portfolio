@@ -2,7 +2,6 @@
 // Only quote people who have agreed to be quoted. Keep customer names and internal links out of this file.
 
 export type Award = { title: string; detail: string; when: string };
-export type Stat = { value: string; label: string };
 export type Quote = {
   text: string;
   name: string;
@@ -28,13 +27,6 @@ export const awards: Award[] = [
     detail: 'Galactic Gratitude ×8 · Hidden Gem ×4 · Simpplr Spirit ×2 · Rocket Booster ×2 · Rising Star',
     when: '2025 – 2026',
   },
-];
-
-export const stats: Stat[] = [
-  { value: '94+', label: 'PRs merged across Recognition, Rewards and Redemption' },
-  { value: '111K+', label: 'points allocated through a mid-cycle allowance solution' },
-  { value: '15 days', label: 'to ship a Programs milestone, half the expected time' },
-  { value: '80%+', label: 'code coverage maintained on delivered work' },
 ];
 
 export const quotes: Quote[] = [
