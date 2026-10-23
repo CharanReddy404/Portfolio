@@ -1,127 +1,61 @@
 // Content for the printable resume at /resume (`pnpm resume` saves it to public/resume.pdf).
-// It follows the layout of the original 2023 resume; only Simpplr and Education were updated.
-import { experience } from './experience';
+// Single-column format: summary, experience, skills, education.
 import { site } from './site';
 
-const simpplr = experience.find((e) => e.company === 'Simpplr')!;
+export type ResumeJob = { role: string; company: string; when: string; place: string; points: string[] };
 
 export const resume = {
-  updated: '3rd October 2026',
-  name: { first: 'Charan', last: 'B' },
-  title: 'Software Engineer',
-  email: site.email,
-  phone: '+919380473736',
+  name: 'Charan B',
+  headline: 'Backend Software Engineer · Bangalore, India',
+  contact: [site.email, site.phone, 'github.com/CharanReddy404', 'linkedin.com/in/charanreddy404'],
 
-  links: [
-    { label: 'Linktree', handle: 'CharanReddy404', url: 'https://linktr.ee/CharanReddy404' },
-    { label: 'Github', handle: 'CharanReddy404', url: 'https://github.com/CharanReddy404' },
-    { label: 'LinkedIn', handle: 'CharanReddy404', url: 'https://www.linkedin.com/in/charanreddy404' },
-    { label: 'YouTube', handle: 'CharanReddy404', url: 'https://youtube.com/@charanreddy404' },
-    { label: 'Twitter', handle: 'CharanReddy404', url: 'https://twitter.com/charanreddy404' },
-    { label: 'HackerRank', handle: 'CharanReddy404', url: 'https://www.hackerrank.com/charanreddy404' },
-  ],
-
-  skills: [
-    ['ReactJs', 'NodeJs', 'JavaScript'],
-    ['TypeScript', 'Redux', 'NextJs'],
-    ['Express', 'Docker', 'Microservices'],
-    ['MongoDB', 'PostgreSQL', 'DSA'],
-    ['Core Java', 'Git', 'GitHub'],
-    ['Linux', 'REST APIs', 'TestCafe'],
-  ],
-
-  education: [
-    {
-      degree: 'Master of Computer Applications',
-      field: 'Artificial Intelligence',
-      lines: ['Jain (Deemed-to-be University)'],
-      when: 'Nov 2025 - Present',
-      place: 'Bangalore, IN',
-    },
-    {
-      degree: 'Bachelor of Computer Application',
-      lines: ['Bangalore North University', 'Govt. First Grade College for Boys', 'Cum. CGPA: 7.4 / 10.0'],
-      when: 'Sept 2022',
-      place: 'Kolar, IN',
-    },
-  ],
-
-  projects: [
-    {
-      name: 'NextJS Dashboard',
-      text: 'Developed a dynamic dashboard using Next.js, leveraging Tailwind CSS for styling. Implemented user authentication with NextAuth and utilized PostgreSQL for database functionality. Deployed the project on Vercel for optimal performance.',
-      url: 'https://nextjs-dashboard-nu-weld.vercel.app',
-    },
-    {
-      name: 'React Movies',
-      text: 'Created a responsive movie application using React.js, incorporating Redux for state management. Styled the application using Tailwind CSS for a modern and sleek interface. Implemented features for browsing and managing movie data to enhance user experience.',
-      url: 'https://charanreddy404-react-movies.netlify.app/',
-    },
-  ],
+  summary:
+    'Backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Rated Far Exceeds Expectations for FY2026.',
 
   experience: [
     {
-      company: 'Simpplr',
       role: 'Associate Software Engineer',
-      when: 'May 2023 - Present',
-      place: 'Remote, IN',
+      company: 'Simpplr',
+      when: 'May 2023 – Present',
+      place: 'Remote',
       points: [
-        ...simpplr.highlights,
-        'Work across Kafka event streams, Redis caching, Prisma, Docker and Kubernetes deployments, with CI/CD on GitHub Actions and Jenkins.',
+        'Designed and built the rewards ledger recording every rewards transaction, serving as the source of truth for balances and history; used it to allocate 111,000+ points mid-cycle across multiple customers through a safe, auditable process.',
+        'Owned the Tango gift-card availability webhook end to end, from API and data model design to production, preventing redemptions from failing on out-of-stock items.',
+        'Built core logic for the Programs feature with Peer Awards (award, per-giver and total program limits with weekly, monthly and quarterly resets) and delivered a key milestone in 15 days, half the expected time.',
+        'Shipped bulk points upload via CSV and concurrency-safe editing of recognition points; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube issues, including SQL injection.',
+        'Merged 94+ PRs across Recognition, Rewards and Redemption services with 80%+ code coverage, and mentored two new backend engineers through onboarding.',
+        'Deployed services on Docker and Kubernetes with CI/CD on GitHub Actions and Jenkins.',
       ],
     },
     {
-      company: 'EMOMENT.IN',
       role: 'Full Stack Developer',
-      when: 'Oct 2022 - Feb 2023',
-      place: 'Remote, IN',
+      company: 'eMoment.in',
+      when: 'Oct 2022 – Feb 2023',
+      place: 'Remote',
       points: [
-        'Despite facing challenges without senior guidance, I successfully navigated the complexities, acquiring proficiency in new technologies such as Node.js and SQL.',
-        'My responsibilities included working on a project facilitating stock purchases using Solana cryptocurrency.',
-        'I actively participated in both backend (Node.js) and frontend (React.js) development, resolving bugs, and implementing new features across various projects.',
+        'Built Node.js APIs and React features for a platform enabling stock purchases with Solana.',
+        'Shipped features and resolved production bugs across backend and frontend, picking up Node.js and SQL without senior guidance.',
       ],
     },
     {
+      role: 'Teaching Assistant, Java DSA',
       company: 'Coding Ninjas',
-      role: 'Teaching Assistant at Coding Ninjas',
-      when: 'May 2022 - Sep 2022',
-      place: 'Remote, IN',
-      points: [
-        'I undertook an internship at Coding Ninjas as a Teaching Assistant for Java DSA from May 2022 to September 2022, spanning 5 months.',
-        'During this period, I mentored 969 students, addressed 1.5k queries, and achieved a rating of 4.77.',
-      ],
+      when: 'May 2022 – Sep 2022',
+      place: 'Remote',
+      points: ['Mentored 969 students and resolved 1,520 doubts with a 4.77/5 rating.'],
     },
-    {
-      company: 'Sanmoon Software Solutions',
-      role: 'Software Engineering Trainee',
-      when: 'Jun 2017 - Apr 2018',
-      place: 'Bangalore, IN',
-      points: [
-        'I gained foundational knowledge in web development.',
-        'I created static websites for clients, and actively sought new project opportunities.',
-      ],
-    },
+  ] satisfies ResumeJob[],
+
+  skills: [
+    { group: 'Languages', items: ['TypeScript', 'JavaScript', 'Java', 'SQL'] },
+    { group: 'Backend', items: ['Node.js', 'NestJS', 'Fastify', 'Express', 'REST APIs', 'Microservices', 'Kafka'] },
+    { group: 'Data', items: ['PostgreSQL', 'Prisma', 'Redis', 'MongoDB'] },
+    { group: 'Infra and tools', items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'Git', 'Linux'] },
+    { group: 'Frontend', items: ['React', 'Redux', 'Next.js'] },
   ],
 
-  certifications: [
-    ['2023', 'Udemy', 'The Complete JavaScript Course 2024'],
-    ['2023', 'Cutshort', 'Cutshort Certified Javascript - Advanced'],
-    ['2022', 'Coding Ninjas', 'Front End | Full Stack Web Development'],
-    ['2022', 'Coding Ninjas', 'Back End | Full Stack Web Development in Node.js'],
-    ['2022', 'Coding Ninjas', 'Advance Front-End Web Development with React'],
-    ['2022', 'Coding Ninjas', 'Introduction to Programming Using Java'],
-    ['2022', 'Coding Ninjas', 'Data Structures in JAVA'],
-    ['2023', 'HiCounselor', 'Build a URL Shortener from Scratch'],
-  ],
-
-  achievements: [
-    {
-      title: 'Simpplr',
-      text: 'Brilliant Beginner R&D Award (Apr 2025). FY2026 annual rating: Far Exceeds Expectations. 18 peer recognitions.',
-    },
-    {
-      title: 'Coding Ninja',
-      text: 'I have mentored 969 students, addressed 1520 doubts and queries on Java DSA, and achieved a rating of 4.77.',
-    },
+  education: [
+    { degree: 'MCA, Artificial Intelligence, Jain (Deemed-to-be University)', when: '2025 – Present' },
+    { degree: 'BCA, Bangalore North University · CGPA 7.4/10', when: '2022' },
   ],
 };
