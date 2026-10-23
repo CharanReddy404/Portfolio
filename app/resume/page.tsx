@@ -27,7 +27,7 @@ export default function Resume() {
     <main className='min-h-screen bg-stone-200 py-10 print:bg-white print:py-0'>
       <style>{'@page { size: A4; margin: 0; }'}</style>
       <article
-        className={`${inter.className} mx-auto h-[297mm] w-[210mm] overflow-hidden bg-white px-[17mm] py-[14mm] text-[11.25px] leading-[1.6] text-[#1a1a1a] shadow-xl print:shadow-none`}
+        className={`${inter.className} mx-auto h-[297mm] w-[210mm] overflow-hidden bg-white px-[17mm] py-[14mm] text-[10.75px] leading-[1.5] text-[#1a1a1a] shadow-xl print:shadow-none`}
       >
         <header className='text-center'>
           <h1 className='text-[24px] font-semibold tracking-tight text-black'>{r.name}</h1>
@@ -69,6 +69,19 @@ export default function Resume() {
               </p>
             ))}
           </div>
+        </Section>
+
+        <Section title='Certifications'>
+          <ul>
+            {r.certifications.map((c) => (
+              <li key={c.name} className='flex items-baseline justify-between gap-6'>
+                <span>
+                  {c.name} <span className='text-[#555]'>· {c.issuer}</span>
+                </span>
+                <span className='shrink-0 whitespace-nowrap text-[#555]'>{c.date}</span>
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section title='Education'>

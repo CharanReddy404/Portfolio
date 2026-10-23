@@ -1,6 +1,7 @@
 // Content for the printable resume at /resume (`pnpm resume` saves it to public/resume.pdf).
-// Single-column format: summary, experience, skills, education.
+// Single-column format: summary, experience, skills, certifications, education.
 import { site } from './site';
+import { certifications as allCertifications } from './certifications';
 
 export type ResumeJob = { role: string; company: string; when: string; place: string; points: string[] };
 
@@ -53,6 +54,18 @@ export const resume = {
     { group: 'Infra and tools', items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'Git', 'Linux'] },
     { group: 'Frontend', items: ['React', 'Redux', 'Next.js'] },
   ],
+
+  // Every certificate from the site; the five short Cybrary courses share one line.
+  certifications: [
+    ...allCertifications.filter((c) => c.issuer !== 'Cybrary'),
+    {
+      name: 'Linux, Windows & Cybersecurity Fundamentals (5 courses)',
+      issuer: 'Cybrary',
+      date: 'Dec 2023',
+    },
+  ]
+    .map((c) => ({ name: c.name, issuer: c.issuer ?? '', date: c.date ?? '' }))
+    .sort((a, b) => Number(b.date.slice(-4)) - Number(a.date.slice(-4))),
 
   education: [
     { degree: 'MCA, Artificial Intelligence, Jain (Deemed-to-be University)', when: '2025 – Present' },
