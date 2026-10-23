@@ -58,10 +58,17 @@ export const education: Education[] = [
 
 export const educationDates = (e: Education) => (e.start ? `${e.start} — ${e.end}` : e.end);
 
+// Shown under the skills grid in the About section.
+export const aiNote = {
+  title: 'AI-Assisted Development',
+  text: 'I use Claude and Cursor to design, build, test and ship features faster, without trading off code quality.',
+};
+
 export const skills: { group: string; items: string[] }[] = [
   { group: 'Languages', items: ['TypeScript', 'JavaScript', 'Java', 'SQL'] },
   { group: 'Frontend', items: ['React', 'Next.js', 'Tailwind CSS'] },
   { group: 'Backend', items: ['Node.js', 'NestJS', 'Fastify', 'Kafka', 'REST APIs', 'Microservices'] },
   { group: 'Data', items: ['PostgreSQL', 'Prisma', 'Redis', 'MongoDB'] },
   { group: 'Tooling', items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'Turborepo', 'Monorepos'] },
+  { group: 'AI tools', items: ['Claude', 'Cursor'] },
 ];

@@ -1,6 +1,6 @@
-import { ArrowRight, ArrowUpRight, Download, Phone } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Download, Phone, Sparkles } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
-import { education, educationDates, site, skills } from '@/content/site';
+import { aiNote, education, educationDates, site, skills } from '@/content/site';
 import { experience } from '@/content/experience';
 import { projects, showProjects } from '@/content/projects';
 import { certifications } from '@/content/certifications';
@@ -105,6 +105,12 @@ export default function Home() {
               </div>
             ))}
           </dl>
+          <div className='mt-8 flex gap-3 rounded-xl border border-line bg-surface p-5'>
+            <Sparkles className='mt-0.5 h-5 w-5 shrink-0 text-accent' aria-hidden='true' />
+            <p className='text-[15px] leading-relaxed'>
+              <span className='font-medium'>{aiNote.title}:</span> <span className='text-muted'>{aiNote.text}</span>
+            </p>
+          </div>
         </Section>
 
         {/* Experience */}
