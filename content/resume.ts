@@ -1,5 +1,5 @@
 // Content for the printable resume at /resume (`pnpm resume` saves it to public/resume.pdf).
-// Jake's Resume style: experience, technical skills, education, certifications.
+// Jake's Resume style: summary, experience, technical skills, education, certifications.
 import { site } from './site';
 import { certifications as allCertifications } from './certifications';
 
@@ -15,6 +15,8 @@ export const resume = {
     'linkedin.com/in/charanreddy404',
   ],
 
+  summary:
+    'Backend engineer with 4+ years building financial-grade TypeScript microservices (NestJS, Fastify, PostgreSQL, Kafka) for an enterprise recognition and rewards platform.',
 
   experience: [
     {

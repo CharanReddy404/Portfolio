@@ -79,6 +79,10 @@ export default function Resume() {
           ))}
         </header>
 
+        <Section title='Summary'>
+          <p className='ml-[6pt] text-[9.6pt] leading-[1.35]'>{r.summary}</p>
+        </Section>
+
         <Section title='Experience'>
           {r.experience.map((job) => (
             <div key={job.company}>
