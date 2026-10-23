@@ -76,6 +76,10 @@ export default function Resume() {
           </p>
         </header>
 
+        <Section title='Summary'>
+          <p className='ml-[6pt] text-[9.6pt] leading-[1.35]'>{r.summary}</p>
+        </Section>
+
         <Section title='Experience'>
           {r.experience.map((job) => (
             <div key={job.company}>
@@ -113,6 +117,7 @@ export default function Resume() {
               <li key={c.name} className='flex justify-between gap-[12pt]'>
                 <span>
                   <strong>{c.name}</strong> | <em>{c.issuer}</em>
+                  {c.badge && <em> · {c.badge}</em>}
                 </span>
                 <span className='shrink-0 whitespace-nowrap'>{c.date}</span>
               </li>

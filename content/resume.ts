@@ -1,5 +1,5 @@
 // Content for the printable resume at /resume (`pnpm resume` saves it to public/resume.pdf).
-// Jake's Resume style: experience, education, technical skills, certifications.
+// Jake's Resume style: summary, experience, education, technical skills, certifications.
 import { site } from './site';
 import { certifications as allCertifications } from './certifications';
 
@@ -8,6 +8,9 @@ export type ResumeJob = { role: string; company: string; when: string; place: st
 export const resume = {
   name: 'Charan B',
   contact: [site.email, site.phone, 'github.com/CharanReddy404', 'linkedin.com/in/charanreddy404'],
+
+  summary:
+    'Backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Rated Far Exceeds Expectations for FY2026.',
 
   experience: [
     {
@@ -51,17 +54,18 @@ export const resume = {
     { group: 'Frontend', items: ['React', 'Redux', 'Next.js'] },
   ],
 
-  // Every certificate from the site; the five short Cybrary courses share one line.
+  // Only the certificates that support a backend profile (the full list stays on the website).
   certifications: [
-    ...allCertifications.filter((c) => c.issuer !== 'Cybrary'),
-    {
-      name: 'Linux, Windows & Cybersecurity Fundamentals (5 courses)',
-      issuer: 'Cybrary',
-      date: 'Dec 2023',
-    },
-  ]
-    .map((c) => ({ name: c.name, issuer: c.issuer ?? '', date: c.date ?? '' }))
-    .sort((a, b) => Number(b.date.slice(-4)) - Number(a.date.slice(-4))),
+    'Full Stack Web Development in Node.js (Back End)',
+    'Data Structures in Java',
+    'Understanding TypeScript',
+    'Cutshort Certified JavaScript — Advanced',
+    'Build a URL Shortener from Scratch',
+  ].map((name) => {
+    const c = allCertifications.find((x) => x.name === name);
+    if (!c) throw new Error(`Unknown certification: ${name}`);
+    return { name: c.name, issuer: c.issuer ?? '', date: c.date ?? '', badge: c.badge };
+  }),
 
   education: [
     {
