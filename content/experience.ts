@@ -23,7 +23,7 @@ export const experience: Experience[] = [
       'Designed and built the Tango gift-card availability webhook end to end, preventing redemptions from failing on out-of-stock items.',
       'Built core logic for the new Programs feature with Peer Awards — award, per-giver and total program limits with weekly, monthly and quarterly resets — and delivered a key milestone in 15 days, half the expected time.',
       'Shipped bulk points upload via CSV and editing recognition with points safely under concurrent edits; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube findings.',
-      'Merged 94+ PRs across Recognition, Rewards and Redemption with 80%+ code coverage, handled production support, and mentored two new backend engineers.',
+      'Merged 150+ PRs across Recognition, Rewards and Redemption with 80%+ code coverage, handled production support, and mentored two new backend engineers.',
     ],
     tech: [
       'TypeScript',

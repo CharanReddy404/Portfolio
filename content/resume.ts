@@ -29,7 +29,7 @@ export const resume = {
         'Owned the Tango gift-card availability webhook end to end, from API and data model design to production, preventing redemptions from failing on out-of-stock items.',
         'Built core logic for the Programs feature with Peer Awards (award, per-giver and total program limits with weekly, monthly and quarterly resets) and delivered a key milestone in 15 days, half the expected time.',
         'Shipped bulk points upload via CSV and concurrency-safe editing of recognition points; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube issues, including SQL injection.',
-        'Merged 94+ PRs across Recognition, Rewards and Redemption services with 80%+ code coverage, and mentored two new backend engineers through onboarding.',
+        'Merged 150+ PRs across Recognition, Rewards and Redemption services with 80%+ code coverage, and mentored two new backend engineers through onboarding.',
         'Deployed services on Docker and Kubernetes with CI/CD on GitHub Actions and Jenkins.',
       ],
     },
