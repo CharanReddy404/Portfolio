@@ -18,8 +18,10 @@ export const experience: Experience[] = [
     end: 'Present',
     url: 'https://www.simpplr.com',
     highlights: [
-      'Backend engineer on the Recognition & Rewards team since Feb 2025, building NestJS and Fastify services on PostgreSQL in a TypeScript monorepo.',
-      'Own ledger management on the rewards side; designed a safe, auditable way to allocate allowance points mid-cycle and distributed 111,000+ points across multiple customers.',
+      'Backend engineer on the Recognition & Rewards team since Feb 2025, engineering core financial microservices with NestJS and Fastify on PostgreSQL in a TypeScript monorepo.',
+      'Designed the user wallet and budget ledgers with strict ACID guarantees to handle high-concurrency reward transactions.',
+      'Built the multi-tenant reward store supporting multiple countries and multi-vendor integrations, fulfilling both digital and physical orders.',
+      'Designed a safe, auditable way to allocate allowance points mid-cycle and distributed 111,000+ points across multiple customers.',
       'Designed and built the Tango gift-card availability webhook end to end, preventing redemptions from failing on out-of-stock items.',
       'Built core logic for the new Programs feature with Peer Awards — award, per-giver and total program limits with weekly, monthly and quarterly resets — and delivered a key milestone in 15 days, half the expected time.',
       'Shipped bulk points upload via CSV and editing recognition with points safely under concurrent edits; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube findings.',
