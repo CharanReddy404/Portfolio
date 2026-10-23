@@ -58,7 +58,7 @@ export const resume = {
     { group: 'Backend', items: ['Node.js', 'NestJS', 'Fastify', 'Express', 'REST APIs', 'Microservices', 'Kafka'] },
     { group: 'Data', items: ['PostgreSQL', 'Prisma', 'Redis', 'MongoDB'] },
     { group: 'Infra and tools', items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'Git', 'Linux'] },
-    { group: 'AI tools', items: ['Claude', 'Cursor'] },
+    { group: 'AI-Assisted Development', items: ['Claude, Cursor to design, build, test and ship features faster without trading off quality'] },
     { group: 'Frontend', items: ['React', 'Redux', 'Next.js'] },
   ],
 
