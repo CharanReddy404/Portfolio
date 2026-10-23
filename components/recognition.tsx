@@ -1,5 +1,5 @@
 import { Award as AwardIcon, Quote as QuoteIcon } from 'lucide-react';
-import { awards, feedbackCards, quotes, recognitionCards, stats, type Quote } from '@/content/recognition';
+import { awards, feedbackCards, quotes, recognitionCards, type Quote } from '@/content/recognition';
 import { RecognitionWall } from './recognition-wall';
 import { cn } from '@/lib/utils';
 
@@ -50,16 +50,6 @@ export function Recognition() {
           </li>
         ))}
       </ul>
-
-      <dl className='grid grid-cols-2 gap-x-6 gap-y-8 border-y border-line py-8 md:grid-cols-4'>
-        {stats.map((s) => (
-          <div key={s.value}>
-            <dt className='sr-only'>{s.label}</dt>
-            <dd className='font-serif text-4xl tracking-tight text-accent'>{s.value}</dd>
-            <dd className='mt-2 text-sm leading-snug text-muted'>{s.label}</dd>
-          </div>
-        ))}
-      </dl>
 
       <div>
         <p className='font-mono text-xs uppercase tracking-wider text-muted'>
