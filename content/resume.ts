@@ -25,7 +25,7 @@ export const resume = {
       when: 'May 2023 – Present',
       place: 'Remote',
       points: [
-        'Engineered core financial microservices for an enterprise recognition and rewards platform, designing user wallet and budget ledgers with strict ACID guarantees to handle high-concurrency reward transactions.',
+        'Backend engineer for a rewards system generating ~$5M ARR; engineered core financial microservices, designing user wallet and budget ledgers with strict ACID guarantees for high-concurrency reward transactions.',
         'Built the multi-tenant reward store supporting multiple countries and multi-vendor integrations, fulfilling both digital and physical orders.',
         'Owned the Tango gift-card availability webhook end to end, preventing failed redemptions on out-of-stock items.',
         'Designed a safe, auditable ledger process to allocate 111,000+ points mid-cycle across multiple customers.',
