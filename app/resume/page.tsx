@@ -1,23 +1,58 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { resume } from '@/content/resume';
 
-// Print-ready single-column resume. `pnpm resume` saves it to public/resume.pdf.
+// Print-ready resume in the style of "Jake's Resume" (LaTeX). `pnpm resume` saves it to public/resume.pdf.
 export const metadata: Metadata = {
   title: 'Resume',
   robots: { index: false },
 };
 
-const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600'] });
+// Computer Modern (CMU Serif, OFL) — the typeface of the original LaTeX template.
+const cmu = localFont({
+  src: [
+    { path: './fonts/cmu-serif-500-roman.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/cmu-serif-500-italic.woff2', weight: '400', style: 'italic' },
+    { path: './fonts/cmu-serif-700-roman.woff2', weight: '700', style: 'normal' },
+    { path: './fonts/cmu-serif-700-italic.woff2', weight: '700', style: 'italic' },
+  ],
+  fallback: ['Georgia', 'serif'],
+});
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className='mt-5'>
-      <h2 className='border-b border-[#d4d4d4] pb-1 text-[11px] font-semibold tracking-[0.02em] text-[#555]'>
+    <section>
+      <h2 className='mb-[4pt] mt-[9pt] border-b-[0.6pt] border-black pb-[1pt] text-[12.5pt] [font-variant:small-caps]'>
         {title}
       </h2>
-      <div className='mt-2.5'>{children}</div>
+      {children}
     </section>
+  );
+}
+
+// Two-line entry: bold title with right-aligned detail, then italic subtitle with italic detail.
+function Entry({
+  title,
+  right,
+  subtitle,
+  subRight,
+}: {
+  title: string;
+  right: string;
+  subtitle: string;
+  subRight: string;
+}) {
+  return (
+    <div className='mb-[3pt] ml-[6pt]'>
+      <div className='flex justify-between gap-[12pt]'>
+        <strong>{title}</strong>
+        <span className='shrink-0 whitespace-nowrap'>{right}</span>
+      </div>
+      <div className='flex justify-between gap-[12pt] text-[9.6pt] italic'>
+        <span>{subtitle}</span>
+        <span className='shrink-0 whitespace-nowrap'>{subRight}</span>
+      </div>
+    </div>
   );
 }
 
@@ -27,72 +62,62 @@ export default function Resume() {
     <main className='min-h-screen bg-stone-200 py-10 print:bg-white print:py-0'>
       <style>{'@page { size: A4; margin: 0; }'}</style>
       <article
-        className={`${inter.className} mx-auto h-[297mm] w-[210mm] overflow-hidden bg-white px-[17mm] py-[14mm] text-[10.75px] leading-[1.5] text-[#1a1a1a] shadow-xl print:shadow-none`}
+        className={`${cmu.className} mx-auto h-[297mm] w-[210mm] overflow-hidden bg-white px-[14mm] py-[12mm] text-[10.6pt] leading-[1.22] text-black shadow-xl print:shadow-none`}
       >
-        <header className='text-center'>
-          <h1 className='text-[24px] font-semibold tracking-tight text-black'>{r.name}</h1>
-          <p className='mt-1 text-[11px] text-[#555]'>{r.headline}</p>
-          <p className='mt-0.5 text-[11px] text-[#555]'>{r.contact.join(' · ')}</p>
+        <header className='mb-[6pt] text-center'>
+          <h1 className='text-[25pt] font-bold leading-none tracking-[0.5pt] [font-variant:small-caps]'>{r.name}</h1>
+          <p className='mt-[5pt] text-[9.6pt]'>
+            {r.contact.map((c, i) => (
+              <span key={c}>
+                {i > 0 && <span className='mx-[5pt]'>|</span>}
+                <span className={c.startsWith('+') ? '' : 'underline'}>{c}</span>
+              </span>
+            ))}
+          </p>
         </header>
 
-        <Section title='Summary'>
-          <p>{r.summary}</p>
-        </Section>
-
         <Section title='Experience'>
-          <div className='space-y-3'>
-            {r.experience.map((job) => (
-              <div key={job.company}>
-                <div className='flex items-baseline justify-between gap-6'>
-                  <p>
-                    <span className='font-semibold'>{job.role}</span>, {job.company}
-                  </p>
-                  <p className='shrink-0 whitespace-nowrap text-[#555]'>
-                    {job.when} · {job.place}
-                  </p>
-                </div>
-                <ul className='mt-1 list-disc space-y-0.5 pl-[1.4em] marker:text-[#1a1a1a]'>
-                  {job.points.map((pt) => (
-                    <li key={pt}>{pt}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {r.experience.map((job) => (
+            <div key={job.company}>
+              <Entry title={job.role} right={job.when} subtitle={job.company} subRight={job.place} />
+              <ul className='mb-[5pt] ml-[22pt] mt-[2pt] list-disc text-[9.6pt] marker:text-[7pt]'>
+                {job.points.map((pt) => (
+                  <li key={pt} className='mb-[1.2pt] pl-[2pt]'>
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </Section>
 
-        <Section title='Skills'>
-          <div className='space-y-0.5'>
+        <Section title='Education'>
+          {r.education.map((e) => (
+            <Entry key={e.school} title={e.school} right={e.place} subtitle={e.degree} subRight={e.when} />
+          ))}
+        </Section>
+
+        <Section title='Technical Skills'>
+          <div className='ml-[6pt] text-[9.6pt] leading-[1.35]'>
             {r.skills.map((s) => (
               <p key={s.group}>
-                <span className='font-semibold'>{s.group}:</span> {s.items.join(', ')}
+                <strong>{s.group}</strong>: {s.items.join(', ')}
               </p>
             ))}
           </div>
         </Section>
 
         <Section title='Certifications'>
-          <ul>
+          <ul className='ml-[6pt] text-[9.6pt] leading-[1.32]'>
             {r.certifications.map((c) => (
-              <li key={c.name} className='flex items-baseline justify-between gap-6'>
+              <li key={c.name} className='flex justify-between gap-[12pt]'>
                 <span>
-                  {c.name} <span className='text-[#555]'>· {c.issuer}</span>
+                  <strong>{c.name}</strong> | <em>{c.issuer}</em>
                 </span>
-                <span className='shrink-0 whitespace-nowrap text-[#555]'>{c.date}</span>
+                <span className='shrink-0 whitespace-nowrap'>{c.date}</span>
               </li>
             ))}
           </ul>
-        </Section>
-
-        <Section title='Education'>
-          <div className='space-y-0.5'>
-            {r.education.map((e) => (
-              <div key={e.degree} className='flex items-baseline justify-between gap-6'>
-                <p>{e.degree}</p>
-                <p className='shrink-0 whitespace-nowrap text-[#555]'>{e.when}</p>
-              </div>
-            ))}
-          </div>
         </Section>
       </article>
     </main>

@@ -1,5 +1,5 @@
 // Content for the printable resume at /resume (`pnpm resume` saves it to public/resume.pdf).
-// Single-column format: summary, experience, skills, certifications, education.
+// Jake's Resume style: experience, education, technical skills, certifications.
 import { site } from './site';
 import { certifications as allCertifications } from './certifications';
 
@@ -7,11 +7,7 @@ export type ResumeJob = { role: string; company: string; when: string; place: st
 
 export const resume = {
   name: 'Charan B',
-  headline: 'Backend Software Engineer · Bangalore, India',
   contact: [site.email, site.phone, 'github.com/CharanReddy404', 'linkedin.com/in/charanreddy404'],
-
-  summary:
-    'Backend engineer with 3.5 years at Simpplr, a B2B SaaS employee experience platform, building TypeScript services (NestJS, Fastify, PostgreSQL, Kafka) for its recognition and rewards product. Own the rewards ledger that is the source of truth for balances and transaction history. Rated Far Exceeds Expectations for FY2026.',
 
   experience: [
     {
@@ -68,7 +64,17 @@ export const resume = {
     .sort((a, b) => Number(b.date.slice(-4)) - Number(a.date.slice(-4))),
 
   education: [
-    { degree: 'MCA, Artificial Intelligence, Jain (Deemed-to-be University)', when: '2025 – Present' },
-    { degree: 'BCA, Bangalore North University · CGPA 7.4/10', when: '2022' },
+    {
+      school: 'Jain (Deemed-to-be University)',
+      place: 'Bangalore, India',
+      degree: 'Master of Computer Applications, Artificial Intelligence',
+      when: '2025 – Present',
+    },
+    {
+      school: 'Bangalore North University',
+      place: 'Kolar, India',
+      degree: 'Bachelor of Computer Applications · CGPA 7.4/10',
+      when: '2022',
+    },
   ],
 };
