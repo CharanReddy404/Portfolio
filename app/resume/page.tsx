@@ -79,10 +79,6 @@ export default function Resume() {
           ))}
         </header>
 
-        <Section title='Summary'>
-          <p className='ml-[6pt] text-[9.6pt] leading-[1.35]'>{r.summary}</p>
-        </Section>
-
         <Section title='Experience'>
           {r.experience.map((job) => (
             <div key={job.company}>
@@ -98,12 +94,6 @@ export default function Resume() {
           ))}
         </Section>
 
-        <Section title='Education'>
-          {r.education.map((e) => (
-            <Entry key={e.school} title={e.school} right={e.place} subtitle={e.degree} subRight={e.when} />
-          ))}
-        </Section>
-
         <Section title='Technical Skills'>
           <div className='ml-[6pt] text-[9.6pt] leading-[1.35]'>
             {r.skills.map((s) => (
@@ -112,6 +102,12 @@ export default function Resume() {
               </p>
             ))}
           </div>
+        </Section>
+
+        <Section title='Education'>
+          {r.education.map((e) => (
+            <Entry key={e.school} title={e.school} right={e.place} subtitle={e.degree} subRight={e.when} />
+          ))}
         </Section>
 
         <Section title='Certifications'>
