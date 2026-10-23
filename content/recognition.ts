@@ -1,15 +1,7 @@
 // Recognition & feedback, taken from Simpplr's recognition platform, Lattice feedback and FY2026 reviews.
-// Only quote people who have agreed to be quoted. Keep customer names and internal links out of this file.
+// Only show people who have agreed to appear. Keep customer names and internal links out of this file.
 
 export type Award = { title: string; detail: string; when: string };
-export type Quote = {
-  text: string;
-  name: string;
-  role?: string; // TODO: fill in each person's role, e.g. 'Senior Software Engineer'
-  context: string; // where the quote comes from, e.g. 'Peer recognition · Hidden Gem'
-  when: string;
-  featured?: boolean;
-};
 
 export const awards: Award[] = [
   {
@@ -26,17 +18,6 @@ export const awards: Award[] = [
     title: '18 peer recognitions',
     detail: 'Galactic Gratitude ×8 · Hidden Gem ×4 · Simpplr Spirit ×2 · Rocket Booster ×2 · Rising Star',
     when: '2025 – 2026',
-  },
-];
-
-export const quotes: Quote[] = [
-  {
-    text: 'He operates at a level higher than his current title and consistently adds significant value to the team and business. He is clearly a star performer.',
-    name: 'Arbind Kumar',
-    role: 'Team Lead',
-    context: 'FY2026 annual review',
-    when: 'Jan 2026',
-    featured: true,
   },
 ];
 

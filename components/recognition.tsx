@@ -1,39 +1,11 @@
-import { Award as AwardIcon, Quote as QuoteIcon } from 'lucide-react';
-import { awards, feedbackCards, quotes, recognitionCards, type Quote } from '@/content/recognition';
+import { Award as AwardIcon } from 'lucide-react';
+import { awards, feedbackCards, recognitionCards } from '@/content/recognition';
 import { RecognitionWall } from './recognition-wall';
 import { cn } from '@/lib/utils';
 
-function Attribution({ q, className }: { q: Quote; className?: string }) {
-  return (
-    <div className={cn('text-sm', className)}>
-      <p className='font-medium'>
-        {q.name}
-        <span className='font-normal text-muted'> · {q.role ?? 'Simpplr'}</span>
-      </p>
-      <p className='mt-0.5 font-mono text-[11px] text-muted'>
-        {q.context} · {q.when}
-      </p>
-    </div>
-  );
-}
-
 export function Recognition() {
-  const featured = quotes.find((q) => q.featured);
-
   return (
     <div className='space-y-14'>
-      {featured && (
-        <figure className='relative'>
-          <QuoteIcon className='h-8 w-8 text-accent' aria-hidden='true' />
-          <blockquote className='mt-4 font-serif text-3xl leading-snug tracking-tight md:text-[2.5rem] md:leading-[1.15]'>
-            {featured.text}
-          </blockquote>
-          <figcaption className='mt-6'>
-            <Attribution q={featured} />
-          </figcaption>
-        </figure>
-      )}
-
       <ul className='grid gap-3 sm:grid-cols-3'>
         {awards.map((a, i) => (
           <li
