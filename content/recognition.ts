@@ -5,9 +5,9 @@ export type Award = { title: string; detail: string; when: string };
 
 export const awards: Award[] = [
   {
-    title: 'Top Performer · 5/5 review',
-    detail: 'FY2026 annual review rated Far Exceeds Expectations, the highest on the scale',
-    when: 'Feb 2025 – Jan 2026',
+    title: 'Top Performer · 5/5 reviews',
+    detail: 'Rated Far Exceeds Expectations, the highest on the scale, in both FY2025 and FY2026 annual reviews',
+    when: 'FY2025 · FY2026',
   },
   {
     title: 'Brilliant Beginner R&D Award',
