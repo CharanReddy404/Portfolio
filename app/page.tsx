@@ -11,6 +11,7 @@ import { SocialLinks } from '@/components/social-links';
 import { CopyEmail } from '@/components/copy-email';
 import { CertificationsGallery } from '@/components/certifications-gallery';
 import { HeroVisual } from '@/components/hero-visual';
+import { Recognition } from '@/components/recognition';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -172,8 +173,13 @@ export default function Home() {
           </div>
         </Section>
 
+        {/* Recognition */}
+        <Section id='recognition' index='03' title='Recognition & feedback'>
+          <Recognition />
+        </Section>
+
         {/* Projects */}
-        <Section id='projects' index='03' title='Projects'>
+        <Section id='projects' index='04' title='Projects'>
           {showProjects ? (
             <>
               <div className='grid gap-4 sm:grid-cols-2'>
@@ -274,7 +280,7 @@ export default function Home() {
         </Section>
 
         {/* Certifications */}
-        <Section id='certifications' index='04' title='Certifications'>
+        <Section id='certifications' index='05' title='Certifications'>
           <CertificationsGallery items={certifications} />
           <a
             href={site.certificationsUrl}
@@ -288,7 +294,7 @@ export default function Home() {
         </Section>
 
         {/* Contact */}
-        <Section id='contact' index='05' title='Contact'>
+        <Section id='contact' index='06' title='Contact'>
           <p className='font-serif text-4xl leading-tight tracking-tight md:text-6xl'>
             Have a role or a project in mind? <span className='italic text-muted'>Let’s talk.</span>
           </p>

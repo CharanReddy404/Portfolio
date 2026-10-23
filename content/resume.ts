@@ -116,6 +116,10 @@ export const resume = {
 
   achievements: [
     {
+      title: 'Simpplr',
+      text: 'Brilliant Beginner R&D Award (Apr 2025). FY2026 annual rating: Far Exceeds Expectations. 18 peer recognitions.',
+    },
+    {
       title: 'Coding Ninja',
       text: 'I have mentored 969 students, addressed 1520 doubts and queries on Java DSA, and achieved a rating of 4.77.',
     },

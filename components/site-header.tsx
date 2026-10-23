@@ -9,6 +9,7 @@ import { ThemeToggle } from './theme-toggle';
 const NAV = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
+  { id: 'recognition', label: 'Recognition' },
   { id: 'projects', label: 'Projects' },
   { id: 'certifications', label: 'Certifications' },
   { id: 'contact', label: 'Contact' },
