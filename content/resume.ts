@@ -30,9 +30,11 @@ export const resume = {
         'Owned the Tango gift-card availability webhook end to end, preventing failed redemptions on out-of-stock items.',
         'Designed a safe, auditable ledger process to allocate 111,000+ points mid-cycle across multiple customers.',
         'Built core logic for Programs with Peer Awards (award, per-giver and total program limits with weekly, monthly and quarterly resets); delivered a key milestone in 15 days, half the expected time.',
+        'Built time-zone-aware work-anniversary awards in Programs, posted with points at local time.',
+        'Built Boost, letting users add their own points to a colleague\'s recognition to amplify it.',
         'Merged 150+ PRs across Recognition, Rewards and Redemption with 80%+ code coverage; upgraded Node.js 18 to 20, fixed critical SonarQube issues including SQL injection, and mentored two new backend engineers.',
         'Used Claude and Cursor daily for 1.5 years to ship end-to-end features faster with zero reported production bugs; deployed on Docker and Kubernetes with CI/CD on GitHub Actions and Jenkins.',
-        'Top Performer with 5/5 reviews in FY2025 and FY2026; received the Brilliant Beginner R&D Award (Apr 2025) and the Simpplr Rising Star award (Dec 2025).',
+        'Top Performer, 5/5 reviews in FY2025 and FY2026; Brilliant Beginner and Rising Star awards.',
       ],
     },
     {
