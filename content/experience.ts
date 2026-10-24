@@ -24,6 +24,8 @@ export const experience: Experience[] = [
       'Designed a safe, auditable way to allocate allowance points mid-cycle and distributed 111,000+ points across multiple customers.',
       'Designed and built the Tango gift-card availability webhook end to end, preventing redemptions from failing on out-of-stock items.',
       'Built core logic for the new Programs feature with Peer Awards — award, per-giver and total program limits with weekly, monthly and quarterly resets — and delivered a key milestone in 15 days, half the expected time.',
+      'Designed and built time-zone-aware work-anniversary awards in Programs end to end, posting recognition with points at each user\'s local time.',
+      'Designed and built Boost end to end, letting users add their own points to a colleague\'s recognition to amplify it.',
       'Shipped bulk points upload via CSV and editing recognition with points safely under concurrent edits; upgraded a service from Node.js 18 to 20 and fixed critical SonarQube findings.',
       'Merged 150+ PRs across Recognition, Rewards and Redemption with 80%+ code coverage, handled production support, and mentored two new backend engineers.',
       'Top Performer with 5/5 reviews in FY2025 and FY2026; received the Brilliant Beginner R&D Award (Apr 2025) and the Simpplr Rising Star award (Dec 2025).',
